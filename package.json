@@ -1,0 +1,77 @@
+{
+  "name": "uscantest",
+  "version": "1.0.0",
+  "description": "Test task for YouScan",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "BABEL_JEST_STAGE=1 NODE_ENV=test jest",
+    "coverage": "NODE_ENV=test jest --coverage",
+    "dist": "NODE_ENV=production webpack -p",
+    "postinstall": "npm run dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gothy/uscantest.git"
+  },
+  "engines": {
+    "node": "0.10",
+    "npm": "2.10"
+  },
+  "keywords": [],
+  "author": "Dmitry Utkin",
+  "license": "Proprietary",
+  "dependencies": {
+    "compression": "1.4.4",
+    "ejs": "2.3.1",
+    "express": "4.12.4",
+    "express-ejs-layouts": "1.1.0",
+    "object-assign": "2.0.0",
+    "react": "0.13.3",
+    "react-router": "0.13.3",
+    "webpack": "1.9.10"
+  },
+  "devDependencies": {
+    "assets-webpack-plugin": "0.3.1",
+    "autoprefixer-loader": "2.0.0",
+    "babel": "5.6.14",
+    "babel-core": "5.6.15",
+    "babel-eslint": "3.1.10",
+    "babel-jest": "5.3.0",
+    "babel-loader": "5.2.2",
+    "babel-runtime": "5.6.15",
+    "classnames": "1.2.2",
+    "css-loader": "0.14.4",
+    "eslint": "0.21.2",
+    "eslint-loader": "0.11.2",
+    "eslint-plugin-react": "2.3.0",
+    "file-loader": "0.8.4",
+    "jest-cli": "0.4.14",
+    "jsx-loader": "0.13.2",
+    "lodash": "3.9.3",
+    "node-libs-browser": "0.5.2",
+    "react-hot-loader": "1.2.7",
+    "react-tools": "0.13.3",
+    "redux": "0.12.0",
+    "sass-loader": "1.0.2",
+    "style-loader": "0.12.3",
+    "url-loader": "0.5.6",
+    "webpack-dev-server": "1.9.0"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/*"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx"
+    ],
+    "testFileExtensions": [
+      "test.js",
+      "test.jsx"
+    ],
+    "testDirectoryName": "client"
+  }
+}
